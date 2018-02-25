@@ -13,10 +13,8 @@ def lookup(addr):
      except socket.herror:
          return None, None, None
 
-         
-
-
-ip_name_formatted = "input_IP_Data.txt"
+ip_name = "input_IP_Data.txt"
+ip_name_formatted = "no_dup_ip.txt"
 
 #Takes the GAWK file output - and strips out any data apart from IP address
 with open(ip_name, 'r') as f, open(ip_name_formatted, 'w') as n:
@@ -25,10 +23,7 @@ with open(ip_name, 'r') as f, open(ip_name_formatted, 'w') as n:
         n.write(new_line+'\n')
 
 input_data_file = "no_dup_ip.txt"
-dns_records = "netstat_data_all_bridges_dns_records.txt"
-
-
-
+dns_records = "all_exit_dns_records.txt"
 
 with open(input_data_file, 'r') as f, open(dns_records, 'w') as n:
     for line in f:
