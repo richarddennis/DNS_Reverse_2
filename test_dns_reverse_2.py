@@ -1,11 +1,4 @@
 import socket
-import datetime
-import os
-import re
-import sys
-import subprocess
-import pyasn
-
 
 def lookup(addr):
      try:
@@ -28,7 +21,7 @@ dns_records = "all_exit_dns_records.txt"
 with open(input_data_file, 'r') as f, open(dns_records, 'w') as n:
     for line in f:
         if line.strip() == "0.0.0.0":
-              pass
+               pass
           else:
               name,alias,addresslist = lookup(line.strip())
               print name
